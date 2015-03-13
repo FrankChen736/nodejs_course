@@ -1,25 +1,11 @@
 var urlparse = require('url');
-var connect = require('connect');
+var express = require('express');
 var http = require('http');
-var app = connect();
+var app = express();
 
-app.use(function(req,res,next){
-	res.send = function send(html){
-			console.log('send function called');
-			res.writeHead(200,{'Content-Type':'text/html'});
-			res.end(html);
-		};
-	var info=urlparse.parse(req.url,true);
-	req.pathname=info.pathname;
-	req.query=info.query;
 
-	next();	
-});
+app.get('/',function(req,res,next){
 
-app.use(function(req,res,next){
-
-	if (req.pathname==='/'){
-		console.log(res.send);
 		res.send('<ul>' +
 			'<li><a href="/item?cat=1&order=1">item1</a></li>' +
 			'<li><a href="/item?cat=1&order=2">item2</li>' +
@@ -28,32 +14,17 @@ app.use(function(req,res,next){
 			'<li><a href="/item?cat=1&order=5">item5</li>' +
 			'<li><a href="/help">help</li>' +
 			'</ul>');
-	}
-	else{
-		next();
-	}
-		
-});
+	}		
+);
 
-app.use(function(req,res,next){
-	if (req.pathname==='/item' && req.query.cat==1){
+app.get('/item',function(req,res,next){
 		res.send(getdata(req.query.order));	
-	}else{
-		next();
-	}
 });
 
-app.use(function(req,res,next){
-	if (req.pathname==='/help'){
+app.get('/help',function(req,res,next){
 		res.send('<h1> Help me </h1>');
-	}else{
-		next();
-	}
 });
 
-app.use(function(req,res,next){
-		res.send('<h1>Page not found</h1>');
-	});
 
 var cdata = {
 	1: 'item1 detail',
