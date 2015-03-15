@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/public/css/site.css">
+</head>
+<body>
+	<h1>item List</h1>
+	<ul>
+		<% 	list.forEach(function (item){ %>
+			<li><a href='/item/<%= item.id %>'> <%= item.title %> </a></li>
+		<%	});%>
+
+	</ul>
+</body>
+</html>

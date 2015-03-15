@@ -1,0 +1,137 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'ejs', '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose node symlink /usr/bin/node
+5 verbose config Skipping project config: /home/tsungmin/.npmrc. (matches userconfig)
+6 verbose cache add [ 'ejs', null ]
+7 verbose cache add name=undefined spec="ejs" args=["ejs",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'ejs',
+8 verbose parsed url   path: 'ejs',
+8 verbose parsed url   href: 'ejs' }
+9 silly lockFile 75eeca8f-ejs ejs
+10 verbose lock ejs /home/tsungmin/.npm/75eeca8f-ejs.lock
+11 silly lockFile 75eeca8f-ejs ejs
+12 silly lockFile 75eeca8f-ejs ejs
+13 verbose addNamed [ 'ejs', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile bcdf6e5f-ejs ejs@
+16 verbose lock ejs@ /home/tsungmin/.npm/bcdf6e5f-ejs.lock
+17 silly addNameRange { name: 'ejs', range: '*', hasData: false }
+18 verbose request where is /ejs
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id c89dfff9687ee1fd
+21 verbose url raw /ejs
+22 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+23 verbose url resolved https://registry.npmjs.org/ejs
+24 verbose request where is https://registry.npmjs.org/ejs
+25 info trying registry request attempt 1 at 09:48:02
+26 verbose etag "5GPNQTTE2XB2NM83T37J14ZQ1"
+27 http GET https://registry.npmjs.org/ejs
+28 http 200 https://registry.npmjs.org/ejs
+29 silly registry.get cb [ 200,
+29 silly registry.get   { date: 'Sun, 15 Mar 2015 01:48:02 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     etag: '"83KXQOL8TTA6MEGOZ3968736R"',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=60',
+29 silly registry.get     'content-length': '44920',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '47',
+29 silly registry.get     'x-served-by': 'cache-hkg6821-HKG',
+29 silly registry.get     'x-cache': 'HIT',
+29 silly registry.get     'x-cache-hits': '1',
+29 silly registry.get     'x-timer': 'S1426384082.748962,VS0,VE0',
+29 silly registry.get     vary: 'Accept',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly addNameRange number 2 { name: 'ejs', range: '*', hasData: true }
+31 silly addNameRange versions [ 'ejs',
+31 silly addNameRange   [ '0.0.1',
+31 silly addNameRange     '0.0.2',
+31 silly addNameRange     '0.0.3',
+31 silly addNameRange     '0.0.4',
+31 silly addNameRange     '0.1.0',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.6.1',
+31 silly addNameRange     '0.7.0',
+31 silly addNameRange     '0.7.1',
+31 silly addNameRange     '0.7.2',
+31 silly addNameRange     '0.8.0',
+31 silly addNameRange     '0.8.1',
+31 silly addNameRange     '0.8.2',
+31 silly addNameRange     '0.8.3',
+31 silly addNameRange     '0.8.4',
+31 silly addNameRange     '0.8.5',
+31 silly addNameRange     '0.8.6',
+31 silly addNameRange     '0.8.8',
+31 silly addNameRange     '1.0.0',
+31 silly addNameRange     '2.0.2',
+31 silly addNameRange     '2.0.3',
+31 silly addNameRange     '2.0.4',
+31 silly addNameRange     '2.0.5',
+31 silly addNameRange     '2.0.6',
+31 silly addNameRange     '2.0.7',
+31 silly addNameRange     '2.0.8',
+31 silly addNameRange     '2.1.1',
+31 silly addNameRange     '2.1.2',
+31 silly addNameRange     '2.1.3',
+31 silly addNameRange     '2.1.4',
+31 silly addNameRange     '2.2.1',
+31 silly addNameRange     '2.2.2',
+31 silly addNameRange     '2.2.3',
+31 silly addNameRange     '2.2.4',
+31 silly addNameRange     '2.3.1' ] ]
+32 verbose addNamed [ 'ejs', '2.3.1' ]
+33 verbose addNamed [ '2.3.1', '2.3.1' ]
+34 silly lockFile 823d5f08-ejs-2-3-1 ejs@2.3.1
+35 verbose lock ejs@2.3.1 /home/tsungmin/.npm/823d5f08-ejs-2-3-1.lock
+36 silly lockFile f5dbddfd-stry-npmjs-org-ejs-ejs-2-3-1-tgz https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+37 verbose lock https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz /home/tsungmin/.npm/f5dbddfd-stry-npmjs-org-ejs-ejs-2-3-1-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz',
+38 verbose addRemoteTarball   'a697d98ac401e32a99c3deed92c60c19b6199a7f' ]
+39 info retry fetch attempt 1 at 09:48:03
+40 verbose fetch to= /tmp/npm-26800-SHusH0Vl/registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+41 http GET https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+42 http 200 https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+43 silly lockFile f5dbddfd-stry-npmjs-org-ejs-ejs-2-3-1-tgz https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+44 silly lockFile f5dbddfd-stry-npmjs-org-ejs-ejs-2-3-1-tgz https://registry.npmjs.org/ejs/-/ejs-2.3.1.tgz
+45 silly lockFile 823d5f08-ejs-2-3-1 ejs@2.3.1
+46 silly lockFile 823d5f08-ejs-2-3-1 ejs@2.3.1
+47 silly lockFile bcdf6e5f-ejs ejs@
+48 silly lockFile bcdf6e5f-ejs ejs@
+49 error Error: EACCES, mkdir '/home/tsungmin/.npm/ejs/2.3.1'
+49 error  { [Error: EACCES, mkdir '/home/tsungmin/.npm/ejs/2.3.1']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/home/tsungmin/.npm/ejs/2.3.1' }
+50 error Please try running this command again as root/Administrator.
+51 error System Linux 3.13.0-45-generic
+52 error command "/usr/bin/node" "/usr/bin/npm" "install" "ejs" "--save"
+53 error cwd /home/tsungmin/Desktop/nodejs
+54 error node -v v0.10.36
+55 error npm -v 1.4.28
+56 error path /home/tsungmin/.npm/ejs/2.3.1
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, mkdir '/home/tsungmin/.npm/ejs/2.3.1'
+60 verbose exit [ 3, true ]
