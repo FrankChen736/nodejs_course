@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 var cookie = require('cookie-parser');
 var ejs = require('ejs');
 
@@ -14,7 +15,7 @@ app.set('views','views');
 //app.use(cookie(srvKey.GetKey()));
 app.use(session({
 	secret : srvKey.GetKey(),	
-	store : new myStore(__dirname)
+	store : new myStore(path.resolve(__dirname,'./sessions'))
 	}));
 
 function checkLogin(req, res, next){
@@ -41,7 +42,7 @@ app.get('/user', checkLogin, function(req, res, next){
 });
 
 app.get('/logout', function(req, res, next){
-	delete req.session.username;
+	req.session.destroy();
 	res.redirect('/');
 })
 
