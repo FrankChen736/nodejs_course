@@ -1,0 +1,40 @@
+{
+  "data": {
+    "user": [
+      {
+        "first_name": "frank",
+        "last_name": "chen",
+        "createdAt": "2015-04-17T06:06:23.755Z",
+        "updatedAt": "2015-04-17T06:06:23.755Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "first_name": {
+        "type": "string"
+      },
+      "last_name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    }
+  }
+}
