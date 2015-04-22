@@ -10,15 +10,30 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-io.on('connection', function(socket) {
-	console.log('a user connected');
+Array.prototype.remove = function() {
+	var what, a = arguments,
+		L = a.length,
+		ax;
+	while (L && this.length) {
+		what = a[--L];
+		while ((ax = this.indexOf(what)) !== -1) {
+			this.splice(ax, 1);
+		}
+	}
+	return this;
+};
 
-	console.log(socket.rooms);
+var userAdapter = {};
+var userList = [];
+
+io.on('connection', function(socket) {
+	console.log('user connected');
 
 	socket.emit('chat message', {
 		from: '系統',
 		content: '請輸入你的暱稱'
 	});
+	io.emit('user list modify', userList);
 	socket.on('chat message', function(msg) {
 		if (!socket.name) {
 			console.log(msg);
@@ -28,6 +43,9 @@ io.on('connection', function(socket) {
 					from: socket.name,
 					content: '歡迎[' + socket.name + '] 來到這裡'
 				});
+				//userAdapter[socket.name] = adapter;
+				userList.push(socket.name);
+				io.emit('user list modify', userList);
 			} else {
 				socket.emit('chat message', {
 					from: '系統',
@@ -35,7 +53,8 @@ io.on('connection', function(socket) {
 				});
 			}
 		} else {
-			socket.broadcast.emit('chat message', {
+
+			io.emit('chat message', {
 				from: socket.name,
 				content: msg
 			});
@@ -43,10 +62,14 @@ io.on('connection', function(socket) {
 
 		socket.on('disconnect', function() {
 			console.log('user disconnected');
+			userList.remove(socket.name);
+			console.log(userList);
 			io.emit('chat message', {
-				form: '系統',
-				content: 'a user disconnected'
-			});
+				from: '系統',
+				content: socket.name + ' 已經離開了',
+			})
+
+			io.emit('user list modify', userList);
 		});
 	});
 });
